@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Poppins", Arial, sans-serif;
+  background: #f4f2fb;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-shell {
+  width: 100%;
+  max-width: 980px;
+  min-height: 600px;
+  display: flex;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(30, 20, 60, 0.18);
+}
+
+/* ===================== PANEL KIRI: BRANDING ===================== */
+
+.login-brand-panel {
+  flex: 1 1 45%;
+  background: linear-gradient(150deg, #5b21b6 0%, #6a11cb 55%, #3b0764 100%);
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 44px;
+  overflow: hidden;
+}
+
+.brand-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.brand-shape-1 {
+  width: 260px;
+  height: 260px;
+  top: -80px;
+  right: -80px;
+}
+.brand-shape-2 {
+  width: 180px;
+  height: 180px;
+  bottom: -60px;
+  left: -60px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.brand-shape-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 120px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.brand-content {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-logo-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+
+.brand-title {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.brand-subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+}
+
+.brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.brand-feature-item i {
+  font-size: 16px;
+  color: #86efac;
+  flex: 0 0 auto;
+}
+
+.brand-footer {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ===================== PANEL KANAN: FORM ===================== */
+
+.login-form-panel {
+  flex: 1 1 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: #fff;
+}
+
+.login-form-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-form-header {
+  margin-bottom: 32px;
+}
+
+.login-form-header h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.login-form-header p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.login-form .form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.input-icon-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-group i:first-child {
+  position: absolute;
+  left: 14px;
+  color: #9ca3af;
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.input-icon-group .form-control {
+  padding: 12px 14px 12px 42px;
+  border-radius: 12px;
+  border: 1.5px solid #e5e7eb;
+  font-size: 14px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.input-icon-group .form-control:focus {
+  background: #fff;
+  border-color: #5b21b6;
+  box-shadow: 0 0 0 4px rgba(91, 33, 182, 0.1);
+  outline: none;
+}
+
+.btn-toggle-password {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 15px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.btn-toggle-password:hover {
+  color: #5b21b6;
+}
+
+.form-check-input:checked {
+  background-color: #5b21b6;
+  border-color: #5b21b6;
+}
+
+.form-check-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.btn-login-submit {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #5b21b6 0%, #6a11cb 60%, #581c87 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-login-submit:hover {
+  box-shadow: 0 10px 25px rgba(91, 33, 182, 0.35);
+  transform: translateY(-2px);
+}
+
+.login-form-footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 11px;
+  color: #d1d5db;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 860px) {
+  .login-shell {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .login-brand-panel {
+    padding: 36px 30px;
+  }
+
+  .brand-features {
+    display: none;
+  }
+
+  .login-form-panel {
+    padding: 36px 28px;
+  }
+}
+.brand-logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+/* ===================== PREMIUM OVERRIDE (eSPMI BASOK) ===================== */
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.login-page {
+  background: #f3f2f1;
+}
+
+.login-shell {
+  border-radius: 24px !important;
+  box-shadow:
+    0 24px 70px rgba(20, 17, 43, 0.18),
+    0 4px 14px rgba(20, 17, 43, 0.06) !important;
+  overflow: hidden;
+}
+
+.login-brand-panel {
+  background: linear-gradient(
+    160deg,
+    #4c1d95 0%,
+    #6d28d9 45%,
+    #7c3aed 100%
+  ) !important;
+}
+
+.brand-logo-img {
+  width: auto;
+  max-width: 160px;
+  max-height: 70px;
+  height: auto;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+  display: block;
+}
+
+.brand-subtitle .tagline-letter {
+  font-weight: 800;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  text-underline-offset: 3px;
+}
+
+.brand-info-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-top: 28px;
+  backdrop-filter: blur(6px);
+}
+
+.brand-info-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-info-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.brand-info-sub {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2px;
+}
+
+.login-form-panel {
+  background: #fff !important;
+}
+
+.login-form-header h2 {
+  font-weight: 700 !important;
+  font-size: 26px !important;
+  color: #1a1523 !important;
+}
+
+.login-form-header p {
+  color: #8a8698 !important;
+  font-size: 13.5px !important;
+}
+
+.input-icon-group {
+  border-radius: 12px !important;
+  border: 1.5px solid #e5e2ee !important;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.input-icon-group:focus-within {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12) !important;
+}
+
+.btn-login-submit {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  padding: 12px !important;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3) !important;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.btn-login-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(124, 58, 237, 0.4) !important;
+}
+
+.login-form-footer {
+  color: #a39fb5 !important;
+  font-size: 11.5px !important;
+}

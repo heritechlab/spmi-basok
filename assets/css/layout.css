@@ -1,0 +1,215 @@
+/* ==========================================================
+   SIQUA Enterprise Layout Engine v2.0
+   File : assets/css/layout.css
+========================================================== */
+
+/* ==========================================================
+   ROOT
+========================================================== */
+
+:root {
+  --sidebar-width: 280px;
+
+  --navbar-height: 72px;
+
+  --bg-page: #f4f7fc;
+
+  --bg-card: #ffffff;
+
+  --border-color: #e5e7eb;
+
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  padding: 0;
+
+  overflow-x: hidden;
+
+  background: var(--bg-page);
+
+  font-family: "Inter", sans-serif;
+}
+
+/* ==========================================================
+   APP
+========================================================== */
+
+#app {
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  display: flex;
+
+  min-height: 100vh;
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.sidebar {
+  width: var(--sidebar-width);
+
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+.main {
+  margin-left: var(--sidebar-width);
+
+  width: calc(100% - var(--sidebar-width));
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition: 0.25s;
+}
+
+/* ==========================================================
+   TOPBAR
+========================================================== */
+
+.topbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 998;
+
+  height: var(--navbar-height);
+
+  background: #fff;
+
+  border-bottom: 1px solid var(--border-color);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 30px;
+
+  box-shadow: var(--shadow);
+}
+
+/* kiri */
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* kanan */
+
+.topbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.main-content {
+  flex: 1;
+
+  padding: 30px;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.content {
+  width: 100%;
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card {
+  border: none;
+
+  border-radius: 14px;
+
+  box-shadow: var(--shadow);
+}
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+.table {
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   SIDEBAR COLLAPSE
+========================================================== */
+
+.sidebar.collapsed {
+  margin-left: -280px;
+}
+
+.sidebar.collapsed + .main {
+  margin-left: 0;
+
+  width: 100%;
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 992px) {
+  .sidebar {
+    margin-left: -280px;
+
+    transition: 0.3s;
+  }
+
+  .sidebar.show {
+    margin-left: 0;
+  }
+
+  .main {
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .topbar {
+    padding: 0 18px;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+}

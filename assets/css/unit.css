@@ -1,0 +1,77 @@
+/*=====================================================
+ Badge Jenis Unit (Enterprise)
+=====================================================*/
+
+.badge-unit {
+  width: 140px !important;
+
+  display: inline-flex !important;
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: 24px;
+
+  padding: 0 10px;
+
+  border-radius: 30px;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   Header DataTable
+========================================== */
+
+#unitTable thead th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#unitTable tbody td:nth-child(2),
+#unitTable tbody td:nth-child(4) {
+  text-align: left;
+}
+
+#unitTable tbody td {
+  vertical-align: middle;
+}
+
+/* ==================================================
+   Audit Badge
+================================================== */
+
+.audit-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  width: 120px;
+
+  height: 26px;
+
+  white-space: nowrap;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #454444;
+}
+
+.audit-badge i {
+  font-size: 12px;
+}

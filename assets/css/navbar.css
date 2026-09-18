@@ -1,0 +1,189 @@
+/* ==========================================================
+   SIQUA Enterprise
+   Navbar v2.0
+========================================================== */
+
+.topbar {
+  position: sticky;
+
+  top: 0;
+
+  left: 280px;
+
+  right: 0;
+
+  height: 72px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e8edf5;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 28px;
+
+  z-index: 990;
+}
+
+/* ===================================================== */
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===================================================== */
+
+#sidebarToggle {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 10px;
+
+  border: none;
+
+  background: transparent;
+
+  transition: 0.25s;
+}
+
+#sidebarToggle:hover {
+  background: #eef4ff;
+}
+
+.topbar-brand-logo {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ===================================================== */
+
+.page-info h5 {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #1b2b4b;
+}
+
+.page-info small {
+  display: block;
+
+  color: #7a8599;
+
+  margin-top: 3px;
+
+  font-size: 13px;
+}
+
+/* ===================================================== */
+
+.topbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+/* ===================================================== */
+
+.topbar-search {
+  width: 320px;
+}
+
+.topbar-search input {
+  border-radius: 12px;
+
+  border: 1px solid #dfe5ef;
+
+  background: #f8fafd;
+
+  padding: 10px 15px;
+}
+
+.topbar-search input:focus {
+  box-shadow: none;
+
+  border-color: #1976d2;
+
+  background: white;
+}
+
+/* ===================================================== */
+
+.topbar .btn-light {
+  border: 1px solid #e4e9f1;
+
+  background: white;
+
+  border-radius: 12px;
+}
+
+/* ===================================================== */
+
+.topbar .dropdown-toggle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 8px 14px;
+}
+
+.topbar .dropdown-toggle::after {
+  margin-left: 10px;
+}
+
+/* ===================================================== */
+
+.topbar .dropdown-menu {
+  border: none;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  min-width: 220px;
+}
+
+/* ===================================================== */
+
+.topbar .dropdown-item {
+  padding: 10px 16px;
+}
+
+.topbar .dropdown-item i {
+  width: 22px;
+}
+
+/* ===================================================== */
+
+.badge {
+  font-size: 10px;
+}
+
+/* ===================================================== */
+
+@media (max-width: 992px) {
+  .topbar {
+    left: 0;
+
+    padding: 0 18px;
+  }
+
+  .topbar-search {
+    display: none;
+  }
+}

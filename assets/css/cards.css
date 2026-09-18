@@ -1,0 +1,201 @@
+/* ======================================
+   KPI CARD
+====================================== */
+
+.kpi-card {
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.25s;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.kpi-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================================== */
+
+.kpi-card i {
+  position: absolute;
+
+  right: 20px;
+
+  top: 20px;
+
+  font-size: 48px;
+
+  opacity: 0.15;
+}
+
+/* ====================================== */
+
+.kpi-card h2 {
+  margin-top: 20px;
+
+  font-size: 42px;
+
+  font-weight: 700;
+}
+
+/* ====================================== */
+
+.kpi-card p {
+  margin: 0;
+
+  color: #6b7280;
+}
+
+/* ====================================== */
+
+.kpi-card.primary {
+  border-left: 6px solid #2563eb;
+}
+
+.kpi-card.success {
+  border-left: 6px solid #16a34a;
+}
+
+.kpi-card.danger {
+  border-left: 6px solid #dc2626;
+}
+
+.kpi-card.warning {
+  border-left: 6px solid #f59e0b;
+}
+
+/* ======================================
+   QUICK ACTION
+====================================== */
+
+.widget {
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  margin-top: 25px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.widget-header {
+  margin-bottom: 25px;
+}
+
+.widget-header h4 {
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.widget-header small {
+  color: #6b7280;
+}
+
+.quick-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.quick-card {
+  background: #f8fafc;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  transition: 0.25s;
+
+  color: #1f2937;
+
+  border: 1px solid #e5e7eb;
+}
+
+.quick-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+
+  color: #0f4aa3;
+}
+
+.quick-icon {
+  width: 70px;
+
+  height: 70px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: white;
+
+  font-size: 28px;
+
+  margin-bottom: 18px;
+}
+
+.quick-card h5 {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+}
+
+.quick-card p {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+@media (max-width: 992px) {
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================
+   CHART
+====================================== */
+
+canvas {
+  width: 100% !important;
+}
+
+.table td {
+  padding: 12px;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}

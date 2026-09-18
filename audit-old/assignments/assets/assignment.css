@@ -1,0 +1,27 @@
+.assignment-progress {
+  height: 14px;
+  background: #edf2f7;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.assignment-progress .progress-bar {
+  border-radius: 30px;
+}
+.progress {
+  height: 12px !important;
+  border-radius: 20px;
+}
+.btn-group .btn {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge-status {
+  min-width: 95px;
+  text-align: center;
+  border-radius: 50px;
+}

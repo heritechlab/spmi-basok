@@ -1,0 +1,268 @@
+/*==================================================
+SIQUA ENTERPRISE DESIGN SYSTEM
+==================================================*/
+
+:root {
+  --primary: #2563eb;
+  --primary-soft: #eff6ff;
+
+  --success: #16a34a;
+  --success-soft: #f0fdf4;
+
+  --warning: #f59e0b;
+  --warning-soft: #fffbeb;
+
+  --danger: #dc2626;
+  --danger-soft: #fef2f2;
+
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-500: #64748b;
+  --gray-700: #334155;
+  --gray-900: #0f172a;
+
+  --radius: 18px;
+
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
+
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+  --shadow-lg: 0 16px 32px rgba(15, 23, 42, 0.1);
+
+  --transition: 0.25s ease;
+}
+
+body {
+  background: var(--gray-50);
+}
+
+.workspace-container {
+  padding: 24px;
+}
+
+.workspace-card {
+  border: none;
+
+  border-radius: var(--radius);
+
+  background: #fff;
+
+  box-shadow: var(--shadow-md);
+
+  overflow: hidden;
+
+  margin-bottom: 24px;
+
+  transition: var(--transition);
+}
+
+.workspace-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.workspace-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px 24px;
+
+  border-bottom: 1px solid var(--gray-200);
+
+  background: #fff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.workspace-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px 24px;
+
+  border-bottom: 1px solid var(--gray-200);
+
+  background: #fff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.workspace-card-body {
+  padding: 24px;
+}
+
+.selected {
+  border: 2px solid var(--primary);
+
+  background: var(--primary-soft);
+}
+
+.standard-item {
+  transition: 0.25s;
+}
+
+.standard-item:hover {
+  transform: translateY(-3px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.badge-premium {
+  border-radius: 30px;
+
+  padding: 7px 14px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.progress {
+  height: 8px;
+
+  background: var(--gray-200);
+
+  border-radius: 30px;
+
+  overflow: hidden;
+}
+
+.progress-bar {
+  border-radius: 30px;
+}
+
+.btn {
+  border-radius: 12px;
+
+  font-weight: 600;
+}
+
+.form-control {
+  border-radius: 12px;
+
+  border: 1px solid var(--gray-300);
+
+  padding: 12px 16px;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 0.15rem rgba(37, 99, 235, 0.15);
+}
+
+/*======================================
+NAVIGATOR
+======================================*/
+
+.navigator-list {
+  max-height: 650px;
+
+  overflow: auto;
+}
+
+.standard-item {
+  padding: 18px;
+
+  border-radius: 16px;
+
+  margin-bottom: 15px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  border: 1px solid var(--gray-200);
+}
+
+.standard-item:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.standard-item.active {
+  background: var(--primary-soft);
+
+  border-color: var(--primary);
+}
+
+.standard-item.done {
+  background: #f0fdf4;
+}
+
+.standard-item.waiting {
+  opacity: 0.75;
+}
+
+.standard-item strong {
+  font-size: 15px;
+}
+
+.standard-item .fw-semibold {
+  font-size: 15px;
+}
+
+.standard-item .small {
+  font-size: 12px;
+}
+
+.standard-item .badge {
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+
+/*==================================
+STATUS CARD
+===================================*/
+
+.status-card {
+  border: 2px solid #edf2f7;
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  background: #fff;
+}
+
+.status-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.status-card.active {
+  border-color: #2563eb;
+
+  background: #eff6ff;
+}
+
+.status-card h5 {
+  font-weight: 700;
+
+  margin-top: 12px;
+}
+
+.status-card small {
+  color: #64748b;
+}
