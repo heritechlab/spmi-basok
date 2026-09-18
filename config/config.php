@@ -71,6 +71,17 @@ define('LIMIT_DATA', 10);
 
 /*
 |--------------------------------------------------------------------------
+| CLOUDFLARE TURNSTILE (DEV KEY)
+|--------------------------------------------------------------------------
+| Kunci uji resmi Cloudflare, selalu lolos verifikasi, hanya untuk
+| pengembangan. Ganti dengan site key & secret key asli sebelum production.
+*/
+
+define('TURNSTILE_SITE_KEY', '1x00000000000000000000AA');
+define('TURNSTILE_SECRET_KEY', '1x0000000000000000000000000000000AA');
+
+/*
+|--------------------------------------------------------------------------
 | LOAD DATABASE
 |--------------------------------------------------------------------------
 */

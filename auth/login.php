@@ -25,6 +25,7 @@ if (isset($conn) && $conn instanceof mysqli) {
 <title><?= APP_NAME; ?> | Login</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; height: 100%; }
@@ -193,6 +194,8 @@ if (isset($conn) && $conn instanceof mysqli) {
                     <label class="form-check-label small" for="remember" style="font-size:11px;">Ingat saya</label>
                 </div>
             </div>
+
+            <div class="cf-turnstile" data-sitekey="<?= TURNSTILE_SITE_KEY ?>" style="margin-bottom:20px;"></div>
 
             <button type="submit" class="btn-login-submit">LOGIN</button>
 

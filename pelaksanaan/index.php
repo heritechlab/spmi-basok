@@ -105,8 +105,8 @@ require_once __DIR__ . '/../layouts/app.php';
                     <div class="portal-card-desc"><?= htmlspecialchars($p['desc']) ?></div>
                 </div>
 
-                <div class="portal-card-arrow">
-                    <i class="bi bi-box-arrow-up-right"></i>
+                <div class="portal-card-btn">
+                    Kunjungi Sistem <i class="bi bi-arrow-right"></i>
                 </div>
 
             </a>

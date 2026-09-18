@@ -15,6 +15,41 @@ if ($username == "" || $password == "") {
     exit;
 }
 
+/*
+-------------------------------------------------
+Verifikasi Cloudflare Turnstile
+-------------------------------------------------
+*/
+
+$turnstileToken = $_POST['cf-turnstile-response'] ?? '';
+
+if ($turnstileToken == "") {
+    $_SESSION['error'] = "Verifikasi keamanan gagal, silakan coba lagi";
+    header("Location: login.php");
+    exit;
+}
+
+$verify = curl_init('https://challenges.cloudflare.com/turnstile/v0/siteverify');
+curl_setopt_array($verify, [
+    CURLOPT_POST => true,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POSTFIELDS => http_build_query([
+        'secret' => TURNSTILE_SECRET_KEY,
+        'response' => $turnstileToken,
+        'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+    ]),
+]);
+$verifyResponse = curl_exec($verify);
+curl_close($verify);
+
+$verifyResult = json_decode($verifyResponse ?: '', true);
+
+if (empty($verifyResult['success'])) {
+    $_SESSION['error'] = "Verifikasi keamanan gagal, silakan coba lagi";
+    header("Location: login.php");
+    exit;
+}
+
 $sql = "SELECT * FROM users WHERE username=? LIMIT 1";
 
 $stmt = $conn->prepare($sql);
